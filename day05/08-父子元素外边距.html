@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .div1 {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            /* 如果是加padding就是以padding为边界 padding: 10px; */
+            /* 如果是加border 就是以父元素的边框 */
+            border:1px solid red;
+        }
+        .div2 {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2">
+
+        </div>
+    </div>
+</body>
+</html>

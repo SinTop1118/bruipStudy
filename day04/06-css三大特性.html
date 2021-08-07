@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #divId {
+            color: blue;
+        }
+        /* a标签和h标签 继承不了父元素 */
+        .div1 {
+            color: blue;
+            font-size: 30px;
+            text-decoration: none;
+        }
+        /* 间接选中 */
+        .div2 {
+            color: seagreen;
+        }
+
+        .div1 div p {
+            color: blue;
+        }
+        p {
+            color: red;
+        }
+        .div2 p{
+            color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="div1" id="divId">
+        <a href="">123</a>
+        <p>1个</p>
+        <p>2个</p>
+        <p>3个</p>
+        <div class="div2">
+            <p>1个</p>
+            <p>2个</p>
+            <p>3个</p>
+        </div>
+    </div> -->
+
+    <div class="div1">
+        <div class="div2">
+            <p>我是一个p标签</p>
+        </div>
+    </div>
+</body>
+</html>

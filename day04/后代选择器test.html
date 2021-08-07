@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 后代选择器 空格隔开
+           后代不仅仅是儿子，也包括孙子，
+           重孙子，只要是放在指定的标签后都是后代
+           后代选择器可以通过空格一直延续下去
+        */
+       .div1  p{
+           color: lightskyblue;
+       } 
+       .div1 div {
+           color: tomato;
+       }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <p>第1个p</p>
+        <p>第2个p</p>
+        <p>第3个p</p>
+        <div class="div2">
+            <p>第1个</p>
+            <p>第2个</p>
+            <p>第3个</p>
+            <div>我是一个div</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 给a标签从未访问过的时候设置样式 */
+        a:link {
+            color:blue;
+            text-decoration: none;
+        }
+        /* 已经访问过 */
+        a:visited {
+            color: red;
+        } 
+        /* 悬停 */
+        a:hover {
+            color: yellow;
+        }
+        a:active {
+            color: black;
+        }
+        p:not(.p1) {
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.tmall.com/">爱奇艺</a>
+    <!-- 否定伪类 -->
+    <p>我是第1个段落标签</p>
+    <p class="p1">我是第2个段落标签</p>
+    <p>我是第3个段落标签</p>
+    <p>我是第4个段落标签</p>
+</body>
+</html>

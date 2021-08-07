@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "494323",
+      "name": "flower_4f",
+      "font_class": "flower4f",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "15188370",
+      "name": "flower",
+      "font_class": "flower",
+      "unicode": "e6e8",
+      "unicode_decimal": 59112
+    },
+    {
+      "icon_id": "22064236",
+      "name": "flower-outline",
+      "font_class": "flower-outline",
+      "unicode": "e9b0",
+      "unicode_decimal": 59824
+    },
+    {
+      "icon_id": "22064241",
+      "name": "flower",
+      "font_class": "flower1",
+      "unicode": "e9b1",
+      "unicode_decimal": 59825
+    },
+    {
+      "icon_id": "22561869",
+      "name": "flower",
+      "font_class": "flower2",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    }
+  ]
+}

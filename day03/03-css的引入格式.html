@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 内部样式表 -->
+    <style type="text/css">
+    /*
+    通过 import 引入外部样式表
+    要写在style标签的最前面，否则不会生效 或者直接在外部css文件中直接使用*/
+    @import url('./css/03-css.css');
+    /* 格式
+    选择器 {
+        css声明
+    }
+    */
+    /* 标签选择器 */
+    div {
+        font-size: 40px;
+    }
+    </style>
+    <!-- 外部样式表 -->
+    <!-- <link rel="stylesheet" href="./css/03-css.css"> -->
+</head>
+<body>
+    <!-- 通过内联样式设置div的样式 -->
+    <div style="color: red;">
+         我是一个div
+    </div>
+    <div style="color: rgb(70, 97, 114);">123</div>
+    <div>234</div>
+</body>
+</html>

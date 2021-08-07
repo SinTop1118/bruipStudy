@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 通配符选择器 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 属性选择器 */
+        input[type=text] {
+            background-color: red;
+        }
+        /* 获取属性开头选择特定的标签 */
+        /* css2 */
+        input[name|=user] {
+            color: blue;
+        }
+        /* css3 */
+        input[name^=user] {
+            color: blue;
+        }
+        /* 直接加abc */
+        input[abc] {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="user-name" id=""><br>
+    <input type="text" name="" id=""><br>
+    <input type="password" name="username" id=""><br>
+    <input type="text" abc>
+</body>
+</html>

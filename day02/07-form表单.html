@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="test.php">
+        <!-- 默认值value 拿到的值就是value-->
+        账号：<input type="text" name="account" value="jack" placeholder="请输入姓名"> <br>
+        密码：<input type="password" name="pwd"> <br>
+        <!-- 单选按钮 -->
+        <input type="radio" name="gender" value="male" checked>男 &nbsp;
+        <input type="radio" name="gender" value="female">女 <br>
+        <!-- 当我们点击submit按钮时，收集当前表单元素中所有表单的值
+        进行传递参数  传递给action的服务器地址
+        -->
+        <!-- 文件选择器 -->
+        <input type="file">
+        <input type="submit" value="提交">
+
+        <!-- 按钮 -->
+        <input type="button" value="我是一个按钮">
+         <!-- 重置按钮 -->
+        <input type="reset" value="重置">
+        <!-- 隐藏域 -->
+        <input type="hidden" name="username" value="xxx">
+    </form>
+</body>
+</html>

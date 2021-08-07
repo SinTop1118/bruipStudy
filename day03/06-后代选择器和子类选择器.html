@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        /* css里面有继承，所以给div上色子元素就会继承 */
+        .div {
+            color: red;                 
+        }
+        /* 后代选择器 控制两层结构最好 */
+        .div1 p {
+           color: royalblue;   
+        }
+        /* 子类选择器 */
+        .div1>p {
+            color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <p>苹果</p>
+        <p>香蕉</p>
+        <p>橘子</p>
+        <div class="div2">
+            <p>篮球</p>
+            <p>足球</p>
+            <p>乒乓球</p>
+        </div>
+    </div>
+    
+</body>
+</html>

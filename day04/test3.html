@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:first-child {
+            color: lightskyblue;
+        }
+
+        p:nth-child(2) {
+            color: red;
+        }
+        p:last-child {
+            color: blue;
+        }
+        /* 因为同级同类型下，有div外的p4 */
+        .p1:last-of-type {
+            color: tomato;
+        }
+    </style>
+<body>
+        <div>
+            <p>我是div里面的1p</p>
+            <p>我是div里面的2p</p>
+            <p>我是div里面的3p</p>
+        </div>
+        <p class="p1">div外的p1</p>
+        <p>div外的p2</p>
+        <p class="p1">div外的p3</p>
+        <p>div外的p4</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 配置所有a标签的跳转方式  优先级低于标签内设置的跳转方式 -->
+    <base target="_blank">
+</head>
+<body>
+    <!-- 对于行内元素，不能够通过css指定其宽度  不建议嵌套-->
+    <span>span1</span>
+    <div style="border: 1px solid red;">123</div>
+    <span>span2</span>
+    <span>span3</span>
+    <!-- 相对 绝对路径-->
+    <a href="./01-HelloHtml.html">123</a>
+    <!-- img自带宽高元素 -->
+    <img src="../day01-文档.笔记/文档_笔记/images/image-202101162927884.png" alt="图片加载不出来">
+</body>
+</html>

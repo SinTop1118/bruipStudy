@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 序选择器 同级的序选择器*/
+        /* 选中第一个 */
+        p:first-child{
+            background-color: red;
+        }
+        div:first-child{
+            color: sandybrown;
+        }
+        /* 选中最后一个 */
+        p:last-child {
+            background-color: blue;
+        }
+        /* 选中同级别中的所有奇数 */
+        p:nth-child(odd){
+            background-color: lightskyblue;
+        }
+        /* 递增的序选择器 */
+        p:nth-child(3n+1) {
+            background-color: red;
+        }
+        p:last-child {
+            background-color: tomato;
+        }
+        /* 同类型选择器 */
+        div:nth-of-type(2) {
+            background-color: red;  
+        }
+        
+    </style>
+</head>
+<body>
+    <p>我是第1个</p>
+    <p>我是第2个</p>
+    <p>我是第3个</p>
+    <p>我是第4个</p>
+    <p>我是第5个</p>
+    <p>我是第6个</p>
+    <p>我是第7个</p>
+    <p>我是第8个</p>
+    <div>第1个div</div>
+    <div>第2个div</div>
+    <div>第3个div</div>
+    <div>第4个div</div>
+    <div>第5个div</div>
+    <div>第6个div</div>
+</body>
+</html>
