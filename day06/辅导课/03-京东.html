@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+            text-decoration: none;
+        }
+        .main {
+            height: 100%;
+            width: 100%;
+        }
+        /* 页心 */
+        .center {
+            margin: 0 auto;
+            width: 990px;
+        }
+        /* /页心 */
+
+        /* 登录头部 */
+        .loginHeader {
+            height: 80px;
+        }    
+        /* /登录头部 */
+
+        /* 左边 */
+        .left {
+            width: 300px;
+            height: 60px;
+            margin: 10px 0;
+            /* background-color: blue; */
+            float: left;
+        }
+        .left img {
+            float: left;
+        }
+        .left span {
+            display: block;
+            float:left;
+            font-size: 25px;
+            margin: 25px 10px;
+        }
+        /* /左边 */
+
+
+        /* 右边 */
+        .right {
+           width: 170px;
+           height: 18px;
+           float: right;
+           margin-top: 50px;
+        }
+        .right a {
+            font-size: 14px;
+            color: #999;
+        }
+        .right a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+        .right a::before {
+            content: url(./消息\(1\).png);
+            margin-right:10px;
+        }
+        /* /右边 */
+
+        /* 内容 */
+        .content .tipwrap {
+            height: 40px;
+            width: 1920px;
+            background-color: #fff8f0;
+            text-align: center;
+            line-height: 40px;
+            font-size: 14px;
+            color: #999;
+        }
+        .content .tipwrap strong {
+            color: black;
+        }
+        .tipwrap span::before {
+             content: url(./警示.png);
+        }
+
+        .loginContent {
+            height: 475px;
+            width: 100%;
+            background-color:#dd4d4d;
+        }
+        .loginContent .center {
+            height: 475px;
+            width: 990px;
+            background-image: url(./图片.jpg);
+        }
+        .loginContent .login-form {
+            height: 400px;
+            width: 346px;
+            /* background: #fff8f0; */
+            margin: 15px 10px;
+            float: right;
+        }
+        /* 登录提示头 */
+        .login-form .tip {
+            height: 39px;
+            background: #fff8f0;
+            font-size: 14px;
+            text-align: center;
+            line-height: 39px;
+        }
+        
+        .login-form .tip p::before {
+            content: url(./警示.png);
+        }
+        /* /登录提示头 */
+           
+        /* 登录方式 */    
+        .loginTab .WeChat{
+            float: left;
+            height: 55px;
+            width: 173px;
+            text-align: center;
+            background-color: #fff;
+            border-bottom: 1px solid #f4f4f4;
+            /* border-right: 1px solid red; */
+        }
+        .loginTab .Acount{
+            height: 55px;
+            width: 173px;
+            float: right;
+            text-align: center;
+            background-color: #fff;
+            border-bottom: 1px solid #f4f4f4;
+        }
+        .loginTab a {
+            line-height: 55px;
+            width: 100%;
+            color: #999;
+            font-size: 20px;    
+        }
+        .loginTab a:hover {
+            font-weight: bold;
+            color: #e4393c;
+        }
+
+        .loginForm {
+            margin-top: 56px;
+            padding: 20px;
+            width: 306px;
+            height: 200px;
+            background-color: #fff;
+        }
+        .loginForm .wrap {
+            width: 306px;
+            height: 23px;
+        }
+        /* .loginForm .user {
+            height: 38px;
+            width: 260px;
+            margin-bottom: 20px;
+        }
+        .loginForm .user input {
+            height: 38px;
+            width: 260px;
+        }
+
+        .loginForm .password {
+            height: 38px;
+            width: 260px;
+        }
+        .loginForm .password input {
+            height: 38px;
+            width: 260px;
+        }
+        .loginForm label {
+            display: inline-block;
+            height: 38px;
+            width: 38px;
+        } */
+        .loginForm .user {
+            height: 38px;
+            width: 304px;
+            line-height: 38px;
+            margin-bottom: 30px;
+        }
+        .loginForm .user label {
+            height: 38px;
+            width: 38px;   
+            border: 1px solid #999;
+            /* background:red; */
+            float: left;
+        }  
+        .loginForm .user input {
+            /* line-height: 18px; */
+            height: 18px;
+            border: 0;
+            padding: 10px 0 10px 10px;
+            border: 1px solid #999;
+            border-left: 0px;
+            width: 252px;
+            float: left;
+        } 
+        
+        .loginForm .password {
+            height: 38px;
+            width: 304px;
+            line-height: 38px;
+            margin-bottom: 30px;
+        }
+        .loginForm .password label {
+            height: 38px;
+            width: 38px;
+            border: 1px solid #999;
+            /* background:red; */
+            float: left;
+        }  
+        .loginForm .password input {
+            /* line-height: 18px; */
+            height: 18px;
+            border: 0;
+            padding: 10px 0 10px 10px;
+            border: 1px solid #999;
+            border-left: 0px;
+            width: 252px;
+            float: left;
+        } 
+
+        .loginForm .safe {
+            height: 18px;
+            width: 306px;
+            margin: 10px 0;
+        }
+        .loginForm .safe a {
+            float: right;
+            font-size: 12px;
+        }
+        .loginForm .safe a:hover {
+            text-decoration: underline;
+            font-weight: bold;
+            color: #e4393c;
+        }
+        .loginForm .loginBtn {
+            height: 33px;
+            width: 304px;
+            background-color: #e4393c;
+            text-align: center;
+            line-height: 33px;
+            color: #fff8f0;
+            letter-spacing: 10px;
+            /* margin-bottom: 4pxpx; */
+        }
+
+        .otherLogin {
+            background-color: #fff;
+            /* margin-top:15px; */
+            padding-top: 15px;
+            height: 51px;
+            width: 346px;
+        }
+
+        .otherLogin ul {
+            width: 306px;
+            height: 51px;
+            margin: 0 auto;
+        }
+        .otherLogin ul li {
+            list-style: none;
+            height: 50px;
+            width: 68px;
+            font-size: 12px;
+        }
+        .otherLogin .leftLi {
+           float: left;
+           text-align: center;
+           line-height: 50px;
+        }
+        .otherLogin .leftLi i {
+            display: inline-block;
+            vertical-align: middle;
+            height: 16px;
+            width: 16px;
+            background: url(./qq.png) no-repeat;
+        }
+        .otherLogin .leftLi:nth-child(2) i {
+            display: inline-block;
+            vertical-align: middle;
+            height: 16px;
+            width: 16px;
+            background: url(./微信\(1\).png) no-repeat;
+        }
+        .otherLogin .rightLi {
+           float: right;
+           line-height: 50px;
+        }
+        .otherLogin .rightLi i {
+            display: inline-block;
+            vertical-align: middle;
+            height: 16px;
+            width: 16px;
+            background: url(./右箭头.png) no-repeat;
+        }
+        /* /登录方式 */
+         
+        /* /内容 */
+
+        /* 底部 */
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .footer .links {
+            margin-bottom: 10px;
+        }
+        .footer .links a {
+            font-size: 14px;
+            color: black;
+            margin: 10px;
+        }
+        .footer .links a:hover {
+            text-decoration: underline;
+            font-weight: bold;
+            color: #e4393c;
+        }
+        /* /底部 */
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- 页心 -->
+            <!-- 登录头部 -->
+            <div class="loginHeader">
+                <div class="center">
+                        <!-- 左边 -->
+                    <div class="left">
+                        <img src="./log.png" alt="">
+                        <span>欢迎登录</span>
+                    </div>
+                        <!-- /左边 -->
+                        <!-- 右边 -->
+                    <div class="right">
+                            <a href="">登录页面，调查问卷</a>
+                    </div>
+                        <!-- /右边 -->
+                </div>
+            </div>
+        
+            <!-- /登录头部 -->
+            <!-- 主体内容 -->
+        <div class="content">
+            <!-- 警示框 -->
+            <div class="tipwrap">
+                <div class="center">
+                    <span>依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版<strong>《京东隐私政策》</strong>已上线，将更有利于保护您的个人隐私。</span>  
+                </div>
+            </div>
+            <!-- /警示框 -->
+            <div class="loginContent">
+                <div class="center">
+                    <div class="login-form">
+                        <!-- 提示框 -->
+                        <div class="tip">
+                            <p>京东不会以任何理由要求您转账汇款，谨防诈骗。</p>
+                        </div>
+                        <!-- /提示框 -->
+                        <!-- 登录方式 -->
+                        <div class="loginTab">
+                              <div class="WeChat"><a>微信登录</a></div>
+                              <div class="Acount"><a>账户登录</a></div>
+                        </div>
+                        <!-- /登录方式 --> 
+                        <!-- 登录表单  -->
+                        <div class="loginForm">
+                            <div class="wrap"></div>
+                            <div class="user">
+                                <label for="">123</label>
+                                <input type="text">
+                            </div> 
+                            <div class="password">
+                                <label for="">456</label>
+                                <input type="password" name="" id="">
+                            </div>
+                            <div class="safe">
+                                <a>忘记密码</a>
+                            </div>
+                            <div class="loginBtn">
+                                <span>登录</span>
+                            </div>
+                        </div>
+                        <!-- /登录表单  -->
+                        <!-- 其他登录 -->
+                        <div class="otherLogin">
+                            <ul>
+                                <li class="leftLi"><i></i><span>QQ</span></li>
+                                <li class="leftLi"><i></i><span>微信</span></li>
+                                <li class="rightLi"><i></i><span>立即注册</span></li>
+                            </ul>
+                        </div>
+                        <!-- /其他登录 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- /主体内容 -->
+            <!-- 底部 -->
+            <div class="footer">
+                <div class="center">
+                    <div class="links">
+                        <a href="">关于我们</a>
+                        <a href="">联系我们</a>
+                        <a href="">人才招聘</a>
+                        <a href="">商家入驻</a>
+                        <a href="">广告服务</a>
+                        <a href="">手机京东</a>
+                        <a href="">友情链接</a>
+                        <a href="">销售联盟 </a>
+                        <a href="">京东社区</a>
+                        <a href="">京东公益</a>
+                        <a href="">English Site</a>
+                    </div>
+                    <div class="copyright"> 
+                       Copyright © 2004-2021  京东JD.com 版权所有
+                    </div>
+                </div>
+            </div>
+            <!-- /底部 -->
+        
+    </div>
+    
+
+
+</body>
+</html>

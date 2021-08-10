@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 1000px;
+            border: 10px solid red;
+        }
+        /* 谁的高度塌陷，谁清楚浮动 */
+        .father::after {
+            /* 在父元素的最后面添加一个空白的元素 */
+            content: "";
+            display: block;
+            clear: both;
+            
+        }
+        .son {
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            /* 子元素左浮动  因为脱离标准流，不占据空间*/
+            float: left;
+        }
+        .bottom {
+            width: 1000px;
+            height: 200px;
+            background-color: lightskyblue;
+        }
+        /* .clearDiv {
+            clear: both;
+        } */
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+        <!-- 在当前父元素的最后面 添加一个空白的div -->
+        <!-- <div class="clearDiv"></div> -->
+    </div>
+    <div class="bottom"></div>
+</body>
+</html>

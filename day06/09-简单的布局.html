@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 使用通配符选择器进行内外边距的清空 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 头部区域的样式 */
+        .header {
+            width: 1000px;
+            height: 100px;
+            background-color: aqua;
+            margin: 0 auto;
+        }
+        /* 头部区域导航栏 */
+        .header .headerNav {
+            
+        }
+        /* 内容区域的样式 */
+        .content {
+            width: 1000px;
+            height: 700px;
+            background-color: yellow;
+            margin: 0 auto;
+        }
+        .content .left {
+            height: 680px;
+            width: 360px;
+            background-color: blue;
+            /* 加上左浮动 */
+            float: left;
+            /* 设置顶部外边距 */
+            margin: 10px 10px;
+        }
+        .content .right {
+            height: 680px;
+            width: 600px;
+            background-color: blue;
+            /* 加上左浮动 */
+            float: left;
+            /* 设置顶部外边距 */
+            margin: 10px 10px;
+        }
+        .content .right .rightTop {
+            width: 580px;
+            height: 320px;
+            background-color: tomato;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .content .right .rightBottom {
+            width: 580px;
+            height: 330px;
+            background-color: lightskyblue;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        /* 底部区域的样式 */
+        .footer {
+            width: 1000px;
+            height: 300px;
+            background-color: red;
+            margin: 0 auto;  
+        }
+    </style>
+</head>
+<body>
+    <!-- 模拟后台管理系统 ，进行一个人 -->
+    <!-- 头部区域 -->
+    <div class="header">
+        <!-- 头部导航栏 -->
+        <div class="headerNav"></div>
+    </div>
+    <!-- /头部区域 -->
+
+    <!-- 内容区域 -->
+    <div class="content">
+        <div class="left"></div>
+        <div class="right">
+            <!-- 右顶 -->
+            <div class="rightTop"></div>
+            <!-- 右底部 -->
+            <div class="rightBottom"></div>
+        </div>
+    </div>
+    <!-- /内容区域 -->
+
+    <!-- 底部区域 -->
+    <div class="footer"></div>
+    <!-- /底部区域 -->
+</body>
+</html>

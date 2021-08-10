@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  外边距合并：面试题 高频 
+        当嵌套元素给内部元素设置上margin的时候，
+        会发现父元素随着子元素一起向下移动
+         */
+        .outer {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            border: 1px solid blue;
+        }
+        /* 子元素越界带着父元素向下移动 */
+        /* 解决方法
+          1、给父元素设置border
+          boder: 1px solid blue;
+          2.
+
+        */
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+       <div class="outer">
+           <div class="inner"></div>
+       </div>
+</body>
+</html>
