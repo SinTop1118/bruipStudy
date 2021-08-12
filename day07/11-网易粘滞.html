@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 960px;
+            height: 8888px;
+            margin: 0 auto;
+        }
+        .container>div {
+            height: 500px;
+        }
+        .container>div:nth-child(odd) {
+            background-color: blue;
+        }
+        /* 设置多变侧边栏 */
+         .left {
+           position: sticky;
+           top: 60px;
+           width: 100px;
+           height: 500px;
+           background-color: brown;
+           float: left;
+           margin-left: 20px;   
+        }
+         .right {
+           position: sticky;
+           top: 60px;
+           width: 100px;
+           height: 500px;
+           background-color: brown;
+           float: right;
+           margin-right: 20px;   
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <!-- 左右侧边栏 -->
+        <aside class="right"></aside>
+        <aside class="left"></aside>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

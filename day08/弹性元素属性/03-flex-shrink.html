@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 600px;
+            height: 400px;
+            background-color: lightskyblue;
+            margin: 100px auto;
+        /* 伸缩盒子布局 */
+            display: flex;
+        }
+        /* order 对弹性元素做一个排序 */
+        div {
+        /*  flex-basis 宽度优先级， 如果使用flex-basis 则会覆盖width */
+            flex-basis: 200px;
+            width: 100px;
+            height: 60px;
+            color: aliceblue;
+        }
+        .div1 {
+            
+        }
+        .div2 {
+            /* 是否压缩 当为0的时候不压缩 */
+            /* flex-shrink: 0; */
+        }
+        .div3 {
+           
+        }
+    </style>
+</head>
+<body>
+    <!-- 父容器 -->
+    <div class="container">
+         <div class="div1" style="background-color: red;">弹性一</div>
+         <div class="div2" style="background-color: blue;">弹性二</div>
+         <div class="div3" style="background-color: rgb(216, 144, 144);">弹性三</div>    
+    </div>
+</body>
+</html>

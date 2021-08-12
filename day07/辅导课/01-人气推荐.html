@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 1090px;
+            height: 570px;
+            background-color: #999;
+            margin: 0 auto;
+        }
+        .leftBox {
+            float: left;
+            height: 570px;
+            width: 390px;
+            background-color: blue;
+        }
+        .rightWrap{
+            float: left;
+            width: 700px;
+            height: 570px;
+            background-color: aqua;  
+        }
+        .rightWrap div {
+            float: left;
+            height: 280px;
+            width: 223px;
+            background-color: red;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        .rightWrap div:nth-child(odd) {
+               background-color: pink;
+        }
+        .rightWrap div:nth-child(3+n){
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 左边 -->
+        <div class="leftWrap">
+            <div class="leftBox"></div>
+        </div>
+        <!-- 右边 -->
+        <div class="rightWrap">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="container"></div>
+</body>
+</html>

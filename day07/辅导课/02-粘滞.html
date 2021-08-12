@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* 通配 */
+         * {
+             margin: 0;
+             padding: 0;
+             list-style: none;
+             text-decoration: none;
+             outline:none;
+         }
+         /* 父元素 */
+         .container {
+             width: 1920px;
+             height: 6000px;
+             /* background-color: #9999; */
+         }
+         /* /父元素 */
+         /* 页心 */
+         .center {
+             width: 1090px;
+             margin: 0 auto;
+         }
+         /* /页心 */
+         /* 导航栏 */
+         .nav {
+              height: 36px;
+              background-color: #333333;
+         }
+         .nav .center{
+             height: 36px;
+
+         }
+         .leftTip {
+             float: left;
+             width: 362px;
+             height: 36px;
+             line-height: 36px;
+             position: relative;
+         }
+         .leftTip i {
+             height: 36px;
+             width: 26px;
+             position: absolute;
+             top: 10px;
+             background: url(../广播.png) no-repeat;
+         }
+         .leftTip a {
+             font-size: 12px;
+             color: #CC9756 ;
+             margin-left: 20px;
+         }
+         .leftTip a:hover {
+             color: white;
+         }
+         .rightLinks {
+             float: right;
+             height: 36px;
+             width: 471px;
+         }
+         .rightLinks ul li {
+             float: left;
+             height: 36px;
+             line-height: 36px;
+             margin-left: 10px;
+         }
+         .rightLinks ul li a {
+             color: #f2f2f2;
+             padding: 0 7px 0 0;
+             font-size: 12px;
+             border-right: 1px solid white;
+         }
+         .rightLinks ul li a:hover {
+            color: #fff;
+         }
+         .rightLinks .icon1 a {
+             border: none;
+         }
+         .rightLinks .icon2 a {
+             border: none;
+         }
+         .rightLinks .icon1 i{
+             display: inline-block;
+             height: 14px;
+             width: 23px;
+             background: url(../下拉.png) no-repeat;
+             vertical-align: middle;
+         }
+         .rightLinks .icon1 i {
+             border-right: 1px solid #fff;
+         }
+         .rightLinks .icon2 i{
+             display: inline-block;
+             height: 17px;
+             width: 17px;
+             background: url(../手ji.png)no-repeat;
+             vertical-align: middle;
+         }
+         /* /导航栏 */
+         /* 头部 */
+         .header {
+             height: 140px;
+             background-color: #fff;
+             box-shadow: 0 0 3px 0 rgba(0,0,0,.2);
+         }
+         .headerWrap .center {
+             height: 140px;
+             /* background-color: red; */
+         }
+         .headerWrap .center .zhanwei {
+             height: 26px;
+             /* background-color: yellow; */
+         }
+         .headerWrap .center .searchbox {
+             height: 60px;
+             /* background-color: pink; */
+             position: relative;
+         }
+         .searchbox .logo {
+             height: 60px;
+             width: 212px;
+             background-position: 0 -298px;
+             background-image: url(../icon-yxtop-s2904006215-b2811ec0e9.webp);
+         }
+         .searchbox .searchWrap {
+             height: 36px;
+             width: 532px;
+             top: 2px;
+             left: 375px;
+             position: absolute;
+         }
+         .searchbox .tip {
+            position: absolute;
+            top: 40px;
+            left: 380px;
+         }
+         .searchbox .tip a{
+               font-size: 12px;
+               color: rgb(233, 233, 233);
+         }
+         .searchbox .tip a:hover {
+             color: #cc9756;
+         }
+         .searchWrap {
+             position: relative
+         }
+         .searchWrap .btn {
+             position: absolute;
+             top: -1px;
+             left: 444px;
+             height: 39px;
+             width: 90px;
+             border-top-right-radius: 19px;
+             border-bottom-right-radius: 19px;
+             background-color: #cc9756;
+             line-height: 38px;
+             text-align: center;
+             letter-spacing: 1px;
+             font-size: 16px;
+             color: aliceblue;
+         }
+         .searchWrap input{
+             position: absolute;
+             top: -1px;
+             width: 404px;
+             height: 33px;
+             padding-top: 2px;
+             padding-bottom: 2px;
+             border: 1px solid #CC9756;
+             border-bottom-left-radius: 19px;
+             border-top-left-radius: 19px;
+             overflow: hidden;
+             padding-left: 38px; 
+         }
+         .searchWrap i {
+             position: absolute;
+             left: 15px;
+             top: 13px;
+             display: inline-block;
+             height: 14px;
+             width: 14px;
+             z-index: 1;
+             background-position: 0 -518px;;
+             background-image: url(../icon-yxtop-s2904006215-b2811ec0e9.webp);
+         }
+         .searchbox .shopcar {
+             position: relative;
+             width: 134px;
+             height: 38px;
+             background-color: #fff;
+             border: 1px solid #e2c199;
+             border-radius: 19px;
+             position: absolute;
+             top: 1px;
+             right: 1px;
+             text-align: center;
+             line-height: 38px;
+         }
+         .searchbox .shopcar span {
+             color: #e2c199;
+         }
+         .searchbox span {
+             font-size: 16px;
+             color: #fff;
+             font-family: "Microsoft Yahei","微软雅黑",verdana;
+         }
+         .searchbox .icon1 {
+            position: absolute;
+            top: 50%;
+            margin-top: -9px;
+            left: 20px;
+            height: 18px;
+            width: 18px;
+            background-position: 0 -148px;
+            background-image: url(../icon-yxtop-s2904006215-b2811ec0e9.webp);
+         }
+         .searchbox .icon2 {
+            position: absolute;
+            text-align: center;
+            line-height: 20px;
+            color: #fff;
+            font-style: normal;
+            top: 50%;
+            margin-top: -9px;
+            right: 20px;
+            height: 19px;
+            width: 19px;
+            background-position: 0 -51px;
+            background-image: url(../icon-yxtop-s2904006215-b2811ec0e9.webp);
+         }
+         .classify {
+             height: 54px;
+         }
+         .classify ul li:first-child {
+             padding-left: 0px;
+         }
+         .classify ul li:last-child {
+             padding-right: 0;
+         }
+         .classify ul li {
+             float: left;
+             height: 24px;
+             margin-top: 27px;
+             padding: 0 26px;
+             font-size: 14px;
+         }
+         .classify ul li a:hover {
+             color: #CC9756;
+             border-bottom: 3px solid #CC9756;
+         }
+         .classify ul li a{
+             color: black;
+             font-weight: bold;
+             padding-bottom: 7px;
+         }
+         .classify .world {
+            border-left: 1px solid #ccc;
+            height: 14px;
+            margin-top: 28px;
+            float: left;
+            padding: 0;
+         }
+         /* /头部 */
+         /* 轮播图 */
+         .Carousels{
+            height: 420px;
+            position: relative;
+         }
+         .Carousels .leftArrow {
+             height: 50px;
+             width: 50px;
+             background-color: #e2c199;
+             position: absolute;
+             /* 垂直居中 */
+             top: 50%;
+             margin-top: -25px;
+             left: 350px;
+             border-radius: 25px;
+         }
+         .Carousels .rightArrow {
+             height: 50px;
+             width: 50px;
+             background-color: #e2c199;
+             position: absolute;
+             top: 50%;
+             margin-top: -25px;
+             right: 350px;
+             border-radius: 25px;
+         }
+         /* /轮播图 */
+         /* 右菜单 */
+         .rightAs .l1 {
+             height: 140px;
+             width: 72px;
+         }
+         .rightAs .l1 .code {
+             margin: 0 auto;
+             height: 70px;
+             width: 70px;
+             background-image: url(./images/二维码.png);
+             background-size: 100% 100%;
+         }
+         .rightAs .l1 .fontContent {
+             margin-top: 5px;
+             text-align: center;
+             font-size: 12px;
+         }
+         .fontContent .p1 {
+             color: #E2DED6;
+         }
+         .fontContent .p2 {
+             color: #BC3B3B;
+         }
+         .rightAs .line {
+            border-bottom: 1px solid rgb(138, 138, 138);
+            width: 65px;
+            height: 1px;
+            margin: 0 auto;
+          }
+          .rightAs .order {
+              width: 72px;
+              height: 78px;
+              padding-top: 14px;
+              box-sizing: border-box;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+          }
+          .rightAs .order i {
+              display: inline-block;
+              height: 32px;
+              width: 32px;
+              background-image: url(./订阅.png);
+          }
+          .rightAs .order span {
+              font-size: 14px;
+              color: #666;#666
+          }
+         /* 左菜单*/
+         .leftAs ul {
+            border :1px solid #E2DED6;
+         }
+         .leftAs ul li:first-child {
+             background-image: url(./images/0.webp);
+             font-weight: bold;
+             text-align: center;
+             line-height: 38px;
+             color: #BB3343
+         }
+          .leftAs ul li {
+              height: 38px;
+              width: 110px;
+              padding: 0 11px;
+              box-sizing: border-box;
+              background-color: white;
+              /* border-bottom: 1px solid #999; */
+              border-right: 1px solid #E2DED6;
+          }
+          .leftAs .line {
+            border-bottom: 1px solid #ccc;
+            width: 88px;
+            height: 1px;
+            margin: 0 auto;
+            margin-top: -2px;
+          }
+          .leftAs ul .headerMenu .name {
+              display: inline-block;
+              font-weight: bold;
+              width: 50px;
+              height: 30px;
+              font-size: 12px;
+              color: #BB3343;
+          }
+          .leftAs ul li .name {
+              display: inline-block;
+              width: 50px;
+              height: 30px;
+              font-size: 12px;
+              color: black;
+          }
+          .leftAs ul li:hover {
+            color: #BB3343;
+          }
+          .leftAs ul li img {
+              display: inline-block;
+              height: 30px;
+              width: 30px;
+          }
+         /* 左菜单*/
+         
+         /* 产品一 */
+         .product {
+             height: 5000px;
+             background-color: #fff;
+         }
+         .product .center {
+             height: 535px;
+             /* background-color: saddlebrown; */
+             margin-top: 10px;
+         }
+         .product .center .newHeader {
+            height: 48px;
+            /* background-color: #999; */
+            padding-bottom:20px;
+            line-height: 63px;
+         }
+         .product .center .newHeader .leftContent a {
+             font-size: 30px;
+             color: black;
+             font-weight: bold;
+         }
+         .product .center .newHeader .leftContent a:hover {
+             color: #e2c199;
+         }
+         .product .center .newHeader span {
+            margin-left: 5px;
+         }
+         .product .center .newHeader .leftContent {
+             float: left;
+         }
+         .product .center .newHeader .rightContent {
+             float: right;
+             margin-right: 5px;
+         }
+         .product .center .newHeader .rightContent a {
+            color: black;
+            font-size: 14px;
+         }
+         .product .center .newHeader .rightContent a:hover {
+            color: #e2c199;
+         }
+
+         .product .rightAs {
+             width: 72px;
+             height: 364px;
+             float: right;
+             margin-top: 20px;
+             position: sticky;
+             top: 20px;
+             margin-right: 50px;
+         }
+         .product .leftAs {
+             width: 110px;
+             height: 364px;
+             float: left;
+             margin-top: 20px;
+             position: sticky;
+             top: 20px;
+             margin-left: 290px;
+         }
+         .center .productNew {
+            height: 364px;
+            /* background-color: blue; */
+         }
+         .productNew .productItem {
+             height: 345px;
+             width: 265px;
+             float: left;
+             margin-right: 10px;
+             background-color: #ffff;
+             position: relative;
+         }
+         .productNew .productItem:last-child {
+             margin-right: 0;
+         }
+         .productItem imgUrl {
+             height: 265px;
+             width: 265px;
+         }
+         
+         .productItem:hover .bd {
+            background-color: #F4F0EA;
+         }
+         .productItem:hover .imgUrl {
+            background-image: url(./4.webp);
+         }
+         .productNew .productItem {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+         }
+         .productItem .tipUrl {
+             /* border-radius: 0 18px 0 0; */
+             height: 36px;
+             width: 82px;
+             background: url(../tip.webp) no-repeat;
+             /* background-position: px; */
+             background-size: 100% 100%;
+             font-size: 12px;
+             color: seashell;
+             text-align: center;
+             line-height: 36px;
+             top: 230px;
+             position: absolute;
+         }
+         .productItem .tipTime {
+            height: 24px;
+            width: 183px;
+            background-color: #dd1a21;
+            top: 242px;
+            left: 81px;
+            position: absolute;
+            font-size: 12px;
+            line-height: 24px;
+            color: snow;
+         }
+         .productItem .tipTime span {
+             height: 24px;
+             margin-left: 5px;
+         }
+         .productItem .imgUrl {
+             height: 267px;
+             width: 265px;
+             background-image: url(./2.webp);
+         }
+         .bd .tag {
+             width: 200px;
+             height: 20px;
+             margin: 0 auto;
+             text-align: center;
+         }
+         .bd .tag span {
+              display: inline-block;
+              height: 20px;
+              width: 70px;
+              font-size: 12px;
+              color: #fff;
+              background-color: #e36844;
+         }
+         .bd  h4 {
+             text-align: center;
+             height: 40;
+             width: 164px;
+             margin: 0 auto;
+             font-size: 14px;
+         }
+         .price {
+            display: flex;
+            justify-content: center;
+         }
+         
+         /* /产品一 */
+         /* 产品二 */
+         .productTwo {
+             height: 738px;
+             background: #f4f0ea;
+         }
+         .productTwo .center {
+             padding: 60px 0;
+         }
+         .productTwo .center .productTip {
+             height: 48px;
+             padding-bottom: 20px;
+             box-sizing: border-box;
+         }
+         .productTip h3 {
+             float: left;
+             font-size: 28px;
+             font-weight: bold;
+             line-height: 48px;
+         }
+         .leftTip {
+             width: 280px;
+             height: 28px;
+             margin-top: 10px;
+
+         }
+         
+         .leftTip ul li:first-child {
+            margin-left: 30px;
+         }
+         .leftTip ul li {
+             float: left;
+             height: 28px;
+             width: 70px;
+             margin-right: 55px;     
+             border-bottom: 2px solid #e2c199;
+             position: relative;
+            
+         }
+         .leftTip ul li a{
+             margin-left: 10px;
+             position: absolute;
+             top: -1px;
+         }
+         .rightTip {
+            font-size: 14px;
+            margin-top: 15px;
+             float: right;
+         }
+         .rightTip a {
+             color: black;
+         }
+         .rightTip a:hover {
+             color: #e2c199;
+         }
+         .productTwo .productContent{
+             height: 570px;
+             background-color: white;
+             display: flex;
+         }
+         .productTwo .leftProduct {
+              height: 570px;
+              width: 390px;
+         }
+         .productTwo .rightProduct {
+             display: flex;
+             flex: 0 1 700px;
+             background-color: #f4f0ea;
+             flex-wrap: wrap;
+         }
+         .rightProduct div {
+             width: 223px;
+             height: 280px;
+             background-color: #fff;
+             margin-left: 10px;
+         }
+         .rightProduct div:nth-child(n+4):nth-child(-n+6) {
+             margin-top: 10px;
+         }
+         .leftProduct {
+             position: relative;
+         }
+         .leftProduct .img {
+             height: 321px;
+             width: 320px;
+             margin: 40px 35px;
+             background-color: #fff;
+         }
+         .leftProduct .bd {
+            position: relative;
+            width: 390px;
+            height: 30px;
+            background-color: #dd1a21;
+            position: absolute;
+            top: 371px;
+            z-index: 1;
+            line-height: 30px;
+         }
+         .leftProduct .title {
+            background-image: url(../tip.webp);
+            position: absolute;
+            top: -6px;
+            height: 36px;
+            background-size: auto 100%;
+            background-position: right;
+            padding-left: 8px;
+            padding-right: 14px;
+            border-top-left-radius: 3px;
+         }
+         .leftProduct .bd span {
+            margin-left: 25px;
+            font-size: 14px;
+            color: white;
+         }
+         .leftProduct .qixi {
+             height: 48px;
+             width: 48px;
+             position: absolute;
+             top: 6px;
+             left: 6px;
+         }
+         .leftProduct .details {
+             height: 169px;
+             position: relative;
+         }
+         .details .prdTag {
+             height: 20px;
+             width: 200px;
+             text-align: center;
+             position: absolute;
+             top: 20px;
+             left: 85px;
+         }
+         .details .prdTag span {
+             display: inline-block;
+             background-color: #e36844;
+             color: white;
+         }
+         .details>span {
+             position: absolute;
+             top: 50px;
+             left: 85px;
+             font-size: 18px;
+             font-weight: bold;
+         }
+         .details .price {
+            position: absolute;
+             top: 90px;
+             left: 165px;
+             color: red;
+         }
+         .rightProduct .productImg {
+             margin: 0;
+             width: 223px;
+             height: 180px;
+             position: relative;
+         }
+         .rightProduct .productImg .p1img {
+            height: 180px;
+            width: 180px;
+            margin: 0 21px;
+         }
+         .productImg .qixi {
+             height: 48px;
+             width: 48px;
+             position: absolute;
+             top: 6px;
+             left: 6px;
+         }
+         .rightProduct .productDetail {
+             border-top: 1px solid #f4f0ea;
+             margin: 0;
+             height: 92px;
+             background-color: white;
+             position: relative;
+         }
+         .productDetail .Tags {
+             height: 20px;
+             width: 200px;
+             margin: 0 auto;
+             margin-bottom: 5px;
+         }
+         .productDetail h4 {
+             height: 40px;
+             width: 166px;
+             margin: 0 auto;
+             margin-bottom: 5px;
+             font-size: 15px;
+         }
+         .productDetail  p {
+             height: 14px;
+             width: 225px;
+             padding-bottom:9 ;
+             color: red;
+             text-align: center;
+         }
+         .productDetail .timeTip {
+            height: 30px;
+            width: 223px;
+            position: absolute;
+            background-color: #dd1a21;
+            top: -30px;
+            left: -10px;
+         }
+         .productDetail .timeTip div {
+            position: absolute;
+            top: -6px;
+            left: -10px;
+            height: 36px;
+            width: 70px;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: -146px;
+            border-top-left-radius: 3px;
+            background-image: url(../tip.webp);
+         }
+         
+         /* /产品二 */
+    </style>
+</head>
+<body>
+    <!-- 页面父元素 -->
+     <div class="container">
+          <!--导航栏  -->
+        <div class="nav">
+            <div class="center">
+                <!-- 左边内容 -->
+                <div class="leftTip">
+                    <i></i><a href="">因事件（疫情、特大暴雨、台风）影响，部分地区无法配送公告</a>
+                </div>
+                <!-- 右边内容 -->
+                <div class="rightLinks">
+                    <ul>
+                        <li><a href="">登录/注册</a></li>
+                        <li><a href="">我的订单</a></li>
+                        <li><a href="">会员</a></li>
+                        <li><a href="">甄选家</a></li>
+                        <li class="icon1"><a href="">企业采购</a><i></i></li>
+                        <li class="icon1"><a href="">客户服务</a><i></i></li>
+                        <li class="icon2"><a href=""><i></i> APP</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+          <!--/导航栏  -->
+          <!-- 头部 -->
+        <div class="header">
+            <div class="headerWrap">
+                <div class="center">
+                    <!-- 占位符 -->
+                    <div class="zhanwei"></div>
+                    <!-- 搜索框 -->
+                    <div class="searchbox">
+                          <!-- logo -->
+                        <div class="logo"></div>
+                        <!-- 搜索框  -->
+                        <div class="searchWrap">
+                            <i></i>
+                            <input type="text">
+                            <div class="btn"><span>搜索</span></div>
+                        </div>
+                        <div class="tip"><a href="">七夕礼物</a></div>
+                        <!-- 购物车 -->
+                        <div class="shopcar">
+                            <i class="icon1"></i>
+                            <span>购物车</span>
+                            <i class="icon2">0</i>
+                        </div>
+                    </div>
+                    <!-- 标签 -->
+                    <div class="classify">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li><a href="">居家生活</a></li>
+                            <li><a href="">服饰鞋包</a></li>
+                            <li><a href="">美食酒水</a></li>
+                            <li><a href="">个户清洗</a></li>
+                            <li><a href="">母婴亲子</a></li>
+                            <li><a href="">运动旅行</a></li>
+                            <li><a href="">数码家电</a></li>
+                            <li><a href="" >严选全球</a></li>
+                            <li class="world"></li>
+                            <li><a href="">为你严选</a></li>
+                            <li><a href="">众筹</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <!-- /头部 -->
+          <!-- 轮播图 -->
+        <div class="Carousels">
+            <!-- 左箭头 -->
+            <div class="leftArrow"></div>
+            <div class="imgUrl">
+                <img src="https://yanxuan.nosdn.127.net/0fae504f6958db87ee919c38bac02c9b.png?type=webp&imageView&quality=95&thumbnail=1920x420" alt="">
+            </div>
+            <!-- 右箭头 -->
+            <div class="rightArrow"></div>
+        </div>   
+          <!-- /轮播图 -->   
+          <!-- 产品一 -->
+        <div class="product">
+            <!-- 左菜单 -->
+            <aside class="rightAs">
+                <ul>
+                    <li class="l1">
+                        <div class="code"></div>
+                        <div class="fontContent">
+                            <p class="p1">扫码领</p>
+                            <p class="p2">APP大额</p>
+                            <p class="p2">新人红包</p>
+                        </div>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <div class="order">
+                            <i></i>
+                            <span>订阅电子刊</span>
+                        </div>
+                    </li>
+                    <li class="line">
+                        <div class="order">
+                            <i style=" background-image: url(./耳机.png);"></i>
+                            <span>在线客服</span>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+            <!-- 右菜单 -->
+            <aside class="leftAs">
+                <ul>
+                    <li>- 热销榜 -</li>
+                    <li class= "headerMenu">
+                        <span><img src="./images/1.webp" alt=""></span>
+                        <span class="name">全站<br>热销榜</span>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <span><img src="./images/2.webp" alt=""></span>
+                        <span class="name">居家<br>生活榜</span>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <span><img src="./images/3.webp" alt=""></span>
+                        <span class="name">服饰<br>鞋包榜</span>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <span><img src="./images/4.webp" alt=""></span>
+                        <span class="name">数码<br>家电榜</span>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <span><img src="./images/5.webp" alt=""></span>
+                        <span class="name">个护<br>清洁榜</span>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <span><img src="./images/6.webp" alt=""></span>
+                        <span class="name">运动<br>旅行榜</span>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <span><img src="./images/7.webp" alt=""></span>
+                        <span class="name">母婴<br>亲子榜</span>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <span><img src="./images/8.webp" alt=""></span>
+                        <span class="name">全球<br>特色榜</span>
+                    </li>
+                </ul>
+            </aside>
+            <!-- 内容区域 -->
+            <div class="center">
+                <!-- 新品头部 -->
+                <div class="newHeader">
+                    <div class="leftContent">
+                        <a href="">新品首发</a>
+                        <span>为你寻觅世间好物</span>
+                    </div>
+                    <div class="rightContent">
+                        <a href="">更多新品 ></a>
+                    </div>
+                </div>
+                <!-- /新品头部 -->
+                <!-- 产品 -->
+                <div class="productNew">
+                    <div class="productItem">
+                        <a href="">
+                            <img src="./1.webp" alt="">
+                        </a>
+                        <div class="bd">
+                            <div class="tag">
+                                <span>新品尝鲜</span>
+                            </div>
+                            <h4>
+                            <span>
+                            可以吃的“冻干酥脆咖啡”，咖啡饼干 340克
+                            </span>
+                            </h4>
+                            <div class="price">
+                               <span style="color: red;">¥</span>
+                               <span style="color: red;">13.9</span>
+                               <span style="color: rgba(100, 100, 111, 0.4); font-size: 12px; margin-left:5px;margin-top: 5px; text-decoration: line-through;">¥</span>
+                               <span style="color: rgba(100, 100, 111, 0.4); font-size: 12px; margin-top: 5px; text-decoration: line-through;">19.9</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productItem">
+                        <a href="">
+                            <img src="./2.webp" alt="">
+                        </a>
+                        <div class="bd">
+                            <div class="tag">
+                                <span>新品尝鲜</span>
+                            </div>
+                            <h4>
+                            <span>
+                            可以吃的“冻干酥脆咖啡”，咖啡饼干 340克
+                            </span>
+                            </h4>
+                            <div class="price">
+                               <span style="color: red;">¥</span>
+                               <span style="color: red;">13.9</span>
+                               <span style="color: rgba(100, 100, 111, 0.4); font-size: 12px; margin-left:5px;margin-top: 5px; text-decoration: line-through;">¥</span>
+                               <span style="color: rgba(100, 100, 111, 0.4); font-size: 12px; margin-top: 5px; text-decoration: line-through;">19.9</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productItem">
+                        <div class="tipUrl">
+                            <span>新品尝鲜价</span>
+                        </div>
+                        <div class="tipTime">
+                            <span>还剩三天</span>
+                        </div>
+                        <div class="imgUrl">
+                            <!-- <a href="">
+                                <img src="./3.webp" alt="">
+                            </a> -->
+                        </div>
+                        <div class="bd">
+                            <div class="tag">
+                                <span>新品尝鲜</span>
+                            </div>
+                            <h4>
+                            <span>
+                            可以吃的“冻干酥脆咖啡”，咖啡饼干 340克
+                            </span>
+                            </h4>
+                            <div class="price">
+                               <span style="color: red;">¥</span>
+                               <span style="color: red;">13.9</span>
+                               <span style="color: rgba(100, 100, 111, 0.4); font-size: 12px; margin-left:5px;margin-top: 5px; text-decoration: line-through;">¥</span>
+                               <span style="color: rgba(100, 100, 111, 0.4); font-size: 12px; margin-top: 5px; text-decoration: line-through;">19.9</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productItem">
+                        <a href="">
+                            <img src="./4.webp" alt="">
+                        </a>
+                        <div class="bd">
+                            <div class="tag">
+                                <span>新品尝鲜</span>
+                            </div>
+                            <h4>
+                            <span>
+                            可以吃的“冻干酥脆咖啡”，咖啡饼干 340克
+                            </span>
+                            </h4>
+                            <div class="price">
+                               <span style="color: red;">¥</span>
+                               <span style="color: red;">13.9</span>
+                               <span style="color: rgba(100, 100, 111, 0.4); font-size: 12px; margin-left:5px;margin-top: 5px; text-decoration: line-through;">¥</span>
+                               <span style="color: rgba(100, 100, 111, 0.4); font-size: 12px; margin-top: 5px; text-decoration: line-through;">19.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /产品 -->
+            </div>
+            <!-- 产品二 -->
+            <div class="productTwo">
+                <div class="center">
+                    <div class="productTip">
+                         <h3>人气推荐</h3>
+                         <div class="leftTip">
+                             <ul>
+                                 <li><a href="">编辑推荐</a></li>
+                                 <li><a href="">热榜总榜</a></li>
+                             </ul>
+                         </div>
+                         <div class="rightTip">
+                             <a href="">更多推荐></a>
+                         </div>
+                    </div>
+                    <div class="productContent">
+                        <div class="leftProduct">
+                            <div class="img">
+                                <img src="./images/苏大饼干.webp" alt="">
+                            </div>
+                            <img src="./images/七夕节.png" alt="" class="qixi">
+                            <div class="bd">
+                                <span>99元任选9件</span>
+                                <div class="title"></div>
+                            </div>
+                            <div class="details">
+                                <div class="prdTag">
+                                    <span>99选9</span>
+                                </div>
+                                <span>无添加蔗糖，苏打饼干 360克</span>
+                                <span class="price">¥12.8</span>
+                            </div>
+                        </div>
+                        <div class="rightProduct">
+                            <div>
+                                <div class="productImg">
+                                    <img src="./images/七夕节.png" alt="" class="qixi">
+                                    <img src="./images/产品1.webp" alt="" class="p1img">
+                                </div>
+                                <div class="productDetail">
+                                    <div class="Tags"></div>
+                                    <h4><span>
+                                    【59选2】新疆长绒棉男式多色圆领T恤
+                                    </span></h4>
+                                    <p>
+                                        <span>¥</span>
+                                        <span>69</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="productImg">
+                                    <img src="./images/七夕节.png" alt="" class="qixi">
+                                    <img src="./images/产品2.webp" alt="" class="p1img">
+                                </div>
+                                <div class="productDetail">
+                                    <div class="timeTip">
+                                        <div></div>
+                                    </div>
+                                    <div class="Tags"></div>
+                                    <h4><span>
+                                    【59选2】新疆长绒棉男式多色圆领T恤
+                                    </span></h4>
+                                    <p>
+                                        <span>¥</span>
+                                        <span>69</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="productImg">
+                                    <img src="./images/七夕节.png" alt="" class="qixi">
+                                    <img src="./images/产品3.webp" alt="" class="p1img">
+                                </div>
+                                <div class="productDetail">
+                                    <div class="timeTip">
+                                        <div></div>
+                                    </div>
+                                    <div class="Tags"></div>
+                                    <h4><span>
+                                    【59选2】新疆长绒棉男式多色圆领T恤
+                                    </span></h4>
+                                    <p>
+                                        <span>¥</span>
+                                        <span>69</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="productImg">
+                                    <img src="./images/七夕节.png" alt="" class="qixi">
+                                    <img src="./images/产品4.webp" alt="" class="p1img">
+                                </div>
+                                <div class="productDetail">
+                                    <div class="timeTip">
+                                        <div></div>
+                                    </div>
+                                    <div class="Tags"></div>
+                                    <h4><span>
+                                    【59选2】新疆长绒棉男式多色圆领T恤
+                                    </span></h4>
+                                    <p>
+                                        <span>¥</span>
+                                        <span>69</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="productImg">
+                                    <img src="./images/七夕节.png" alt="" class="qixi">
+                                    <img src="./images/产品5.webp" alt="" class="p1img">
+                                </div>
+                                <div class="productDetail">
+                                    <div class="Tags"></div>
+                                    <h4><span>
+                                    【59选2】新疆长绒棉男式多色圆领T恤
+                                    </span></h4>
+                                    <p>
+                                        <span>¥</span>
+                                        <span>69</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="productImg">
+                                    <img src="./images/七夕节.png" alt="" class="qixi">
+                                    <img src="./images/产品6.webp" alt="" class="p1img">
+                                </div>
+                                <div class="productDetail">
+                                    <div class="Tags"></div>
+                                    <h4><span>
+                                    【59选2】新疆长绒棉男式多色圆领T恤
+                                    </span></h4>
+                                    <p>
+                                        <span>¥</span>
+                                        <span>69</span>
+                                    </p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+          <!-- 产品一 -->
+     </div>
+    <!-- /页面父元素 -->   
+</body>
+</html>

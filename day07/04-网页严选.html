@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            height: 400px;
+            width: 740px;
+            background-color: gainsboro;
+            margin: 50px auto;
+        }
+        /* 设置第一个div的样式 */
+        .content>div:first-child {
+            height: 400px;
+            width: 200px;
+            background-color: green;
+            float: left;
+            margin-left: 0;
+        }
+        .content>div{
+           width: 170px;
+           height: 195px;
+           background-color: yellow;
+           float: left;
+           margin-left: 10px;
+        }
+        .content>div:nth-child(n+5):nth-child(-n+7) {
+           background-color: red;
+           margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

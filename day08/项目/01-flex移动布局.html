@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;    
+        }
+        html,body {
+            height: 100%;
+            width: 100%;
+        }
+        /* 父容器 */
+        .container {
+            height: 100vh;
+            background-color: gray;
+            display: flex;
+            flex-direction: column;
+        }
+        .container .menu {
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        .container .menu nav {
+            flex: 0 1 25%;
+            background-color: #fff;
+            border: 1px solid black;
+            box-sizing: border-box;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* 设置header */
+        .container .header {
+            line-height: 70px;
+            text-align: center;
+            font-size: 30px;
+            color: honeydew;
+            background-color: green;
+        }
+        /* 设置内容区域的样式 */
+        .container .content {
+            flex: 1;
+            overflow-y: scroll;
+        }
+        /* 内容区域子元素的样式 */
+        .content div {
+            width: 96%;
+            height: 150px;
+            background-color: red;
+            margin: 2%;
+        }
+        /* 底部样式 */
+        .container .footer {
+            display: flex;
+            background-color: tomato;
+            justify-content: space-evenly;
+        }
+        /* 设置底部菜单来的每个tab */
+        .container .footer div {
+              width: 70px;
+              line-height: 70px;
+              text-align: center;
+              color: honeydew;
+              background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 父容器 -->
+    <div class="container">
+        <!-- 顶部导航栏/标题栏 -->
+        <div class="header">首页</div>
+        <!-- 中间的内容区域 -->
+        <div class="content">
+            <div class="menu">
+                <nav>1</nav>
+                <nav>2</nav>
+                <nav>3</nav>
+                <nav>4</nav>
+                <nav>5</nav>
+                <nav>6</nav>
+                <nav>7</nav>
+                <nav>8</nav>
+            </div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+        </div>
+        <!-- 底部tabbar -->
+        <div class="footer">
+            <div>首页</div>
+            <div>关于</div>
+            <div>我的</div>
+        </div>
+    </div>
+</body>
+</html>

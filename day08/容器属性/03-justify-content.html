@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 300px;
+            height: 200px;
+            background-color: lightskyblue;
+            margin: 100px auto;
+        /* 伸缩盒子布局 */
+            display: flex;
+        /* 用于控制弹性元素在主轴的对齐方式 
+        手机导航栏用得比较多
+        justify-content  主轴
+        1.flex-start  左对齐
+        2.flex-end    右对齐
+        3.center      居中 
+        4.space-between：左右两端对齐
+        5.space-around：项目之间间距为左右两侧项目到容器间距的2倍，比较特别的布局，日常使用不太多   
+        */
+        /* 
+        flex-start | flex-start会让项目在交叉轴紧贴容器顶部
+        flex-end |  flex-start会让项目在交叉轴紧贴容器底部
+        center |  在交叉轴中心位置排列
+        baseline | baseline比较特殊，它让项目以第一行文字的基线为参照进行排列
+        stretch  |默认，弹性元素没有高，则自动铺满
+        
+        */
+            align-items:flex-start
+        }
+        div {
+            width:  60px;
+            height: 50px;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 父容器 -->
+    <div class="container">
+         <div class="div1" style="background-color: red;">弹性一</div>
+         <div class="div2" style="background-color: blue;">弹性二</div>
+         <div class="div3" style="background-color: rgb(216, 144, 144);">弹性三</div>
+         <div class="div4" style="background-color: red;">弹性4</div>
+         <!-- <div class="div5" style="background-color: blue;">弹性5</div>
+         <div class="div6" style="background-color: rgb(216, 144, 144);">弹性6</div> -->
+
+
+         
+    </div>
+</body>
+</html>

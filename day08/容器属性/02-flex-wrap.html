@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 300px;
+            height: 200px;
+            background-color: lightskyblue;
+            margin: 100px auto;
+        /* 伸缩盒子布局 */
+            display: flex;
+        /* 设置是否要换行 flex-wrap: wrap;*/
+            
+        /* 设置反向换行 */
+        flex-wrap: wrap-reverse;
+        /* 简写属性 flex-flow: row-reverse nowrap; */
+        }
+        div {
+            width:  60px;
+            height: 50px;
+            color: aliceblue;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 父容器 -->
+    <div class="container">
+         <div class="div1" style="background-color: red;">弹性一</div>
+         <div class="div2" style="background-color: blue;">弹性二</div>
+         <div class="div3" style="background-color: rgb(216, 144, 144);">弹性三</div>
+         <div class="div4" style="background-color: red;">弹性4</div>
+         <!-- <div class="div5" style="background-color: blue;">弹性5</div>
+         <div class="div6" style="background-color: rgb(216, 144, 144);">弹性6</div> -->
+
+
+         
+    </div>
+</body>
+</html>
